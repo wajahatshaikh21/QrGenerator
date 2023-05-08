@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>QR Generator</title>
+      <head>
+         <title>QR Code Generator</title>
+         <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <header>
+         <div class="logo">
+            <img src="../assets/images/logo.png" alt="Your Logo">
+         </div>
+         <nav>
+          <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href= "./WifiQr/index.html">Wifi</a>
+            <a href="#contact">Contact</a>
+            <div class="dropdown">
+              <button class="dropbtn">Dropdown 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div> 
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+          </div>
+         </nav>
+      </header>
+      <section class="first-qr-section container">
+         <div class="QR-section">
+            <div id="qr-code">
+               <img src="../assets/images/QR.jpg" alt="Qr">
+            </div>
+            <div class="qr-form">
+               <input type="text" id="qr-text" placeholder="Enter text here">
+               <div>
+                  <button id="qr-btn">Create QR Code</button>
+               </div>
+            </div>
+         </div>
+         <div class="color-section">
+            <h1>Generate QR Code</h1>
+            <div>
+               <label for="">Style</label>
+               <div>
+                  <button id="1" data-field="style" class="selected" background-image="../assets/images/QRsquare.png" value="square"></button>
+                  <button data-field="style" class="selected" value="dots"></button>
+               </div>
+               <label for="">color</label>
+               <div>
+                  <button data-field="color" class="selected" data-name="black" style="background-color: #000000;" value="#000000"></button>
+                  <button data-field="color" class="selected" data-name="blue" style="background-color: #22427a;" value="#22427a"></button>
+                  <button data-field="color" class="selected" data-name="orange" style="background-color: #c85f36;" value="#c85f36"></button>
+                  <button data-field="color" class="selected" data-name="red" style="background-color: #d64232;" value="#d64232"></button>
+                  <button data-field="color" class="selected" data-name="green" style="background-color: #375d34;" value="#375d34"></button>
+               </div>
+               <div id="download-section">
+                  <label for="">Select file type:</label>
+                  <select id="fileType">
+                     <option value="svg">SVG</option>
+                     <option value="png">PNG</option>
+                     <option value="jpg">JPG</option>
+                  </select>
+                  <button id="downloadBtn">Download QR Code</button>
+               </div>
+            </div>
+         </div>
+      </section>
+      <script src="qrcode.min.js"></script>
+      <script src="app.js"></script>
+   </body>
+</html>
